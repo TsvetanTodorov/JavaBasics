@@ -19,6 +19,5 @@ public class PetShop {
 
         System.out.println(totalPrice + " lv.");
 
-
     }
 }

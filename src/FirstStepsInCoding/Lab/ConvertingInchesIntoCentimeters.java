@@ -7,7 +7,7 @@ public class ConvertingInchesIntoCentimeters {
 
         Scanner scanner = new Scanner(System.in);
 
-        int num = Integer.parseInt(scanner.nextLine());
+        double num = Double.parseDouble(scanner.nextLine());
 
         double result = num * 2.54;
 
