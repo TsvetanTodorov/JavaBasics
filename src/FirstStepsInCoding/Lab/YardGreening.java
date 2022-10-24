@@ -7,7 +7,7 @@ public class YardGreening {
 
         Scanner scanner = new Scanner(System.in);
 
-        int yardsWhoMustBeGreened = Integer.parseInt(scanner.nextLine());
+        double yardsWhoMustBeGreened = Double.parseDouble(scanner.nextLine());
 
         double pricePerYard = 7.61;
         double discount = 0.18;
