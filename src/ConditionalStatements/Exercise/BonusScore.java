@@ -14,7 +14,7 @@ public class BonusScore {
         if (number <= 100) {
             bonus = 5;
 
-        } else if (number > 100 && number <= 1000) {
+        } else if (number <= 1000) {
             bonus = number * 0.20;
         } else {
             bonus = number * 0.10;
