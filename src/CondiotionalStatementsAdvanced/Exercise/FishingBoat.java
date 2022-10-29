@@ -3,6 +3,10 @@ package CondiotionalStatementsAdvanced.Exercise;
 import java.util.Scanner;
 
 public class FishingBoat {
+    private static final double SPRING_RENT = 3000;
+    private static final double SUMMER_AND_AUTUMN_RENT = 4200;
+    private static final double WINTER_RENT = 2600;
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -16,16 +20,16 @@ public class FishingBoat {
 
         switch (season) {
             case "Spring":
-                rent = calculateRentAfterDiscount(fishermen, 3000, season);
+                rent = calculateRentAfterDiscount(fishermen, SPRING_RENT, season);
                 leftMoney = budget - rent;
                 break;
             case "Summer":
             case "Autumn":
-                rent = calculateRentAfterDiscount(fishermen, 4200, season);
+                rent = calculateRentAfterDiscount(fishermen, SUMMER_AND_AUTUMN_RENT, season);
                 leftMoney = budget - rent;
                 break;
             case "Winter":
-                rent = calculateRentAfterDiscount(fishermen, 2600, season);
+                rent = calculateRentAfterDiscount(fishermen, WINTER_RENT, season);
                 leftMoney = budget - rent;
                 break;
         }
@@ -40,17 +44,18 @@ public class FishingBoat {
 
 
     private static double calculateRentAfterDiscount(int fishermen, double rent, String season) {
+        double rentAfterDiscount;
         if (fishermen <= 6) {
-            rent = rent - (rent * 0.10);
+            rentAfterDiscount = rent - (rent * 0.10);
         } else if (fishermen <= 11) {
-            rent = rent - (rent * 0.15);
+            rentAfterDiscount = rent - (rent * 0.15);
         } else {
-            rent = rent - (rent * 0.25);
+            rentAfterDiscount = rent - (rent * 0.25);
         }
         if (fishermen % 2 == 0 && !season.equals("Autumn")) {
-            rent = rent - (rent * 0.05);
+            rentAfterDiscount = rent - (rent * 0.05);
         }
-        return rent;
+        return rentAfterDiscount;
     }
 
 
