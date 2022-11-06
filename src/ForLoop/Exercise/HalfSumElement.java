@@ -15,12 +15,12 @@ public class HalfSumElement {
         for (int i = 1; i <= n; i++) {
             int currentNumber = Integer.parseInt(scanner.nextLine());
             sum += currentNumber;
-            if (currentNumber > maxNumber) {
+            if (isBiggerThan(currentNumber, maxNumber)) {
                 maxNumber = currentNumber;
             }
         }
         int sumWithoutMaxNumber = sum - maxNumber;
-        if (maxNumber == sumWithoutMaxNumber) {
+        if (isEquals(maxNumber, sumWithoutMaxNumber)) {
             System.out.println("Yes");
             System.out.println("Sum = " + maxNumber);
         } else {
@@ -28,7 +28,13 @@ public class HalfSumElement {
             System.out.println("No");
             System.out.printf("Diff = %d", diff);
         }
+    }
 
+    private static boolean isBiggerThan(int num1, int num2) {
+        return num1 > num2;
+    }
 
+    private static boolean isEquals(int num1, int num2) {
+        return num1 == num2;
     }
 }
