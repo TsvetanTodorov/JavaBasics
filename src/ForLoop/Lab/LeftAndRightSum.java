@@ -22,10 +22,14 @@ public class LeftAndRightSum {
             sum2 += number;
         }
 
-        if (sum1 == sum2) {
+        if (isEquals(sum1, sum2)) {
             System.out.printf("Yes, sum = %d", sum1);
         } else {
             System.out.printf("No, diff = %d", Math.abs(sum1 - sum2));
         }
+    }
+
+    private static boolean isEquals(int num1, int num2) {
+        return num1 == num2;
     }
 }
