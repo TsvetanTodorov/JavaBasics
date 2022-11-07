@@ -35,11 +35,12 @@ public class TrekkingMania {
 
         }
 
-        System.out.printf("%.2f%%%n", ((mussalaGroup * 1.00) / totalPeople) * 100);
-        System.out.printf("%.2f%%%n", ((montblancGroup * 1.00) / totalPeople) * 100);
-        System.out.printf("%.2f%%%n", ((kilimandjaroGroup * 1.00) / totalPeople) * 100);
-        System.out.printf("%.2f%%%n", ((k2Group * 1.00) / totalPeople) * 100);
-        System.out.printf("%.2f%%%n", ((everestGroup * 1.00) / totalPeople) * 100);
+
+        printClimbingInPercent(mussalaGroup, totalPeople);
+        printClimbingInPercent(montblancGroup, totalPeople);
+        printClimbingInPercent(kilimandjaroGroup, totalPeople);
+        printClimbingInPercent(k2Group, totalPeople);
+        printClimbingInPercent(everestGroup, totalPeople);
     }
 
 
@@ -57,5 +58,9 @@ public class TrekkingMania {
 
     private static boolean isLessOrEqualsForty(int num) {
         return num <= 40;
+    }
+
+    private static void printClimbingInPercent(int num1, int num2){
+        System.out.printf("%.2f%%%n", ((num1 * 1.00) / num2) * 100);
     }
 }
