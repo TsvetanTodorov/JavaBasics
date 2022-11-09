@@ -13,7 +13,7 @@ public class AccountBalance {
         while (!n.equals("NoMoreMoney")) {
             double currentMoney = Double.parseDouble(n);
 
-            if (currentMoney > 0) {
+            if (isMoreThanZero(currentMoney)) {
                 System.out.printf("Increase: %.2f%n", currentMoney);
                 totalMoney += currentMoney;
             } else {
@@ -24,6 +24,9 @@ public class AccountBalance {
         }
         System.out.printf("Total: %.2f", totalMoney);
 
+    }
 
+    private static boolean isMoreThanZero(double num) {
+        return num > 0;
     }
 }
