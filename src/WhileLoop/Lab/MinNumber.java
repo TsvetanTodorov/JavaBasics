@@ -10,13 +10,18 @@ public class MinNumber {
         String text = scanner.nextLine();
         int minNumber = Integer.MAX_VALUE;
 
-        while (!text.equals("Stop")){
+        while (!text.equals("Stop")) {
             int currentNumber = Integer.parseInt(text);
-            if(currentNumber<minNumber){
-                minNumber =currentNumber;
+            if (isLessThan(currentNumber, minNumber)) {
+                minNumber = currentNumber;
             }
             text = scanner.nextLine();
         }
         System.out.println(minNumber);
+    }
+
+
+    private static boolean isLessThan(int num1, int num2) {
+        return num1 < num2;
     }
 }
